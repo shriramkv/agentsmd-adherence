@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentsmd-adherence"
+version = "0.1.0"
+description = "Check whether an AI agent session actually followed the rules in AGENTS.md"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shriram K Vasudevan" }]
+requires-python = ">=3.9"
+keywords = ["agents.md", "ai-agents", "goose", "aaif", "compliance", "ci"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/shriramkv/agentsmd-adherence"
+
+[project.scripts]
+agentsmd-adherence = "agentsmd_adherence.cli:main"
+
+[tool.setuptools]
+packages = ["agentsmd_adherence"]
